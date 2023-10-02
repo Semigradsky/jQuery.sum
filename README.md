@@ -5,9 +5,9 @@
 #### Example of usages
 
 ```js
-  var a = 2;
-  var b = 2;
-  var result = $.fn.sum(a, b);
+  const a = 2;
+  const b = 2;
+  const result = $.fn.sum(a, b);
   alert(result === 4); // true
 ```
 

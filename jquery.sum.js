@@ -1,13 +1,25 @@
-;(function($) {
+($ => {
 
-    var reduce = Array.prototype.reduce;
+    const reduce = Array.prototype.reduce;
 
-    function add(a, b) {
-        return a + b;
-    }
+    const add = (a, b) => a + b;
+    const sub = (a, b) => a - b;
+    const multiply = (a, b) => a * b
+    const division = (a, b) => a / b
 
-    $.fn.sum = function () {
-        return reduce.call(arguments, add, 0);
+    $.fn.sum = (...arguments) => {
+        return reduce.call(arguments, add);
     };
 
+    $.fn.diff = (...arguments) => {
+        return reduce.call(arguments, sub);
+    };
+
+    $.fn.product = (...arguments) => {
+        return reduce.call(arguments, multiply);
+    };
+
+    $.fn.quotient = (...arguments) => {
+        return reduce.call(arguments, division);
+    };
 })(jQuery);

@@ -10,10 +10,14 @@
     <script src="../jquery.sum.js"></script>
 
     <script>
-      var a = 2;
-      var b = 2;
-      var result = $.fn.sum(a, b);
-      alert(result === 4); // true
+        const a = 2;
+        const b = 2;
+        const result = $.fn.sum(a, b);
+        document.body.innerText += result
+        document.body.innerText += $.fn.diff(a, b)
+        document.body.innerText += $.fn.product(a, b)
+        document.body.innerText += $.fn.quotient(a, b)
+        alert(result)
     </script>
 </body>
 </html>
